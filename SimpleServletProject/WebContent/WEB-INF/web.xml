@@ -4,4 +4,16 @@
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>
+  
+  
+  <servlet>
+  	<servlet-name>xmlservlet</servlet-name>
+  	<servlet-class>org.thomas.java.XmlServlet</servlet-class>  	
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>xmlservlet</servlet-name>
+  	<url-pattern>/xmlservletpath</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
