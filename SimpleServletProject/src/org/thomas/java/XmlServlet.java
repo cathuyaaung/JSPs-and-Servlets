@@ -10,13 +10,36 @@ import javax.servlet.http.HttpServletResponse;
 
 public class XmlServlet extends HttpServlet {
 
-	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-//		super.doGet(req, resp);
-		PrintWriter writer = resp.getWriter();
-		writer.println("from xmlservlet");
-		System.out.println("xmlservlet");
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) 
+			throws ServletException, IOException {
+		resp.setContentType("text/html");
+		PrintWriter out = resp.getWriter();
+		
+		String username = req.getParameter("username");
+		String firstname = req.getParameter("firstname");
+		String lastname = req.getParameter("lastname");
+		
+		out.printf("Hello from GET %s %s %s", username, firstname, lastname);
+	}
+	
+
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html");
+		PrintWriter out = resp.getWriter();
+		
+		String username = req.getParameter("username");
+		String firstname = req.getParameter("firstname");
+		String lastname = req.getParameter("lastname");
+		String prof = req.getParameter("prof");
+//		String location = req.getParameter("location");
+		String[] location = req.getParameterValues("location");
+		
+		out.printf("Hello from POST %s %s %s %s ", username, firstname, lastname, prof);
+		out.printf("Locations ");
+		for (String string : location) {
+			out.printf("%s ", string);
+		}
+		
 	}
 	
 	
