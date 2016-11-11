@@ -8,7 +8,11 @@
   
   <servlet>
   	<servlet-name>xmlservlet</servlet-name>
-  	<servlet-class>org.thomas.java.XmlServlet</servlet-class>  	
+  	<servlet-class>org.thomas.java.XmlServlet</servlet-class> 
+  	<init-param>
+  		<param-name>defaultname</param-name>
+  		<param-value>thomasaung</param-value>
+  	</init-param> 	
   </servlet>
   
   <servlet-mapping>
