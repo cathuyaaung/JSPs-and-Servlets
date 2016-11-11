@@ -15,9 +15,22 @@
   	</init-param> 	
   </servlet>
   
+  <servlet>
+  	<servlet-name>InitJSP</servlet-name>
+  	<jsp-file>/initpage.jsp</jsp-file>
+  	<init-param>
+  		<param-name>defaultuser</param-name>
+  		<param-value>hughlaurie</param-value>
+  	</init-param>
+  </servlet>
+  
   <servlet-mapping>
   	<servlet-name>xmlservlet</servlet-name>
   	<url-pattern>/xmlservletpath</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>InitJSP</servlet-name>
+  	<url-pattern>/initpage.jsp</url-pattern>
   </servlet-mapping>
   
 </web-app>
